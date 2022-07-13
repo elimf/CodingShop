@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./file/trollface.png">
+    <script src="./script/main.js" defer></script>
+    <title>Coding Shop</title>
+</head>
+<body>
+
+    <header>
+        <nav id="navBarre">
+            <ul>
+                <li id="boutonShopCont"><p id="boutonShop">Votre panier</p></li>
+                <div class="TextSug">
+
+                <form name="input-form" action="#" autocomplete="off" onsubmit="return command()">
+                    <li id="zoneTextCont"><input id="zoneText" type="search" maxlength="100" placeholder="Rechercher une formation..."required></li>
+                </form>
+
+                <div id="suggestion"></div>
+                </div>
+                <li id="logoCont"><img id="logo" src="./file/codingLogo.png" alt="logo Coding Factory"></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <section id="boutique">
+
+        <div id="notifications"name="notifications"> 
+            <div class="notification">
+                <button type="button" id="sortie" >x</button>
+                <div class="PartieGaucheNotification">
+                    <div class="iconeNotif">
+                     <img src="./file/notification.png" id="iconeNotif" alt="icone">
+                    </div>
+                </div>
+                <div class="PartieDroiteNotification">
+                    <h2>Notification</h2>
+                    <p id="notifContent"> Ceci est une notification </p>
+                </div>
+            </div>
+            </div>
+      
+        
+        <section id="boutiqueSansTitre">
+
+            <div id="menuPanier">
+                <p id=articlePanier>Quantité d'article : 0</p>
+                <div id="articles">Aucun Article</div>
+                <p id=prixPanier>Prix total : 0€</p>
+           
+           
+                <button type="button" id="payer">Payer</button>
+                <button type="button" id="vider">Vider</button>
+            </div>
+    
+            <div id="Cartes">
+
+                <div id=original>
+                    <div class="Carte">
+                        <ul>
+                            <li class="carteLogo"><img src="./file/codingLogo.png" alt="logo de la formation"></li>
+                            <li class="carteNom"><p>Name</p></li>
+                            <li class="cartePrix"><p>Price</p></li>
+                            <li class="carteEvaluation"><p>Vote</p></li>
+                            <li class="carteStock"><p>Stock</p></li>
+                            <li class="cartePanier"><input type="button" class="ajouterPanier" value="Ajouter au panier"></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </section>
+
+</body>
+
+</html>

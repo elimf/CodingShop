@@ -1,0 +1,859 @@
+header
+{
+    width: 100%;
+    height: 70px;
+    margin-bottom: 40px;
+    background-color: rgba(104, 0, 202, 0.6);
+    border-bottom: 5px solid lightblue;
+}
+
+#original
+{
+    display: none;
+}
+
+#navBarre > ul
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+#zoneTextCont
+{
+    width: 100%;
+}
+
+#zoneText
+{
+    cursor:pointer;
+    background-color: rgba(255, 255, 255, 0.904);
+    border: 1px solid black;
+    border-radius:20px;
+    margin-top: 7px;
+    height: 53px;
+    width: 100%;
+    
+}
+
+.TextSug
+{
+    width: 60%;
+}
+
+#suggestion
+
+{   
+    background-color:rgba(80, 60, 255, 0.4) ;
+    border: 1px solid none rgb(black);
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left; 
+    margin: 4%;
+}
+
+#logo
+{
+    height: 55px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 7px;
+}
+
+#boutonShop
+{
+    color: white;
+    border: 2px solid white;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 20px;
+    background-color: rgba(80, 60, 255, 0.4);
+    transition-duration: 250ms;
+    cursor: pointer;
+}
+
+
+#notifications
+ {
+    background-image: linear-gradient(lightblue, white);
+    display: none;
+    margin-right:15px;
+    width:13% ;
+    height: 15%;
+    cursor: default;
+    position: fixed;
+    top:1;right:0;
+    z-index: 3;
+    box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.8);
+    border: 2px solid rgba(79, 60, 255, 0.356);
+
+}
+
+.notification
+{
+    padding-top: 2px;
+    position: relative;
+    border-bottom: 1px solid none;
+    box-shadow: 0px 1px 0px white;
+} 
+
+#sortie
+{   
+    cursor: pointer;
+    right:0;
+    position: absolute;
+    background-color:lightblue;
+    border: 1px solid lightblue;
+    z-index: 3;
+}
+
+.PartieGaucheNotification
+{
+    background-color:none;
+    position: absolute;
+    top:0;left:0;
+    height: 100%;
+    width: 30px;
+}
+.PartieDroiteNotification
+
+{
+    width: 100px;
+    height: 100%;
+    padding-top: 2px;
+    margin-left: 20px;
+}
+
+h2
+
+{
+font-size: 14px;
+font-weight: bold;
+color:red;
+text-align: right;
+margin-left: 40px;
+padding: 0px;
+
+}
+
+#iconeNotif
+
+{
+    
+    width: 40px;
+    height: 40px;
+}
+
+body
+
+{
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.ajouterPanier
+
+{   
+    height: 40px;
+    width: 60%;
+    border-radius: 10px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: rgba(100, 100, 255, 0.6);
+    transition-duration: 400ms;
+
+}
+
+#boutiqueSansTitre
+
+{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    padding-top: 20px;
+}
+
+#Cartes
+
+{
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right:10px;
+}
+
+#menuPanier
+
+{ 
+  
+    border-left:2px; 
+    position: relative;
+    margin: 0;
+    width:0;
+    height: 300px;
+    overflow:hidden;
+    padding-left: 20px;
+  
+    box-shadow: none;
+    
+
+}
+
+#payer
+
+{ 
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    height: 30px;
+    width: 40%;
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 0px 2px 30px lightskyblue;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    bottom: 0; 
+    left:0;
+    background-color:rgba(100, 100, 255, 0.6) ;
+    z-index: 3;
+   
+
+}
+
+#vider
+
+{
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    height: 30px;
+    width: 40%;
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 0px 2px 30px lightskyblue;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    bottom: 0;
+    right:0;
+    background-color:rgba(100, 100, 255, 0.6) ;
+    z-index: 3;
+}
+
+
+.carteLogo
+
+{
+    height: 110px;
+    padding-top: 20px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.carteLogo img
+
+{
+    margin-top: 10px;
+    width: 100px;
+}
+
+.Carte
+
+{
+    border: 3px solid rgba(117, 14, 214, 0.9);
+    border-radius: 15px;    
+    margin: 15px;
+    height: 350px;
+    width: 250px;
+    border-style: groove ;
+    box-shadow: 4px 4px 0px rgb(56, 0, 109);
+    text-align: center;
+}
+
+.Carte ul
+
+{
+    padding: 0;
+    list-style: none;
+}
+
+#Cartes
+
+{  
+    margin-top: 50px;
+    display: flex;
+    flex-direction: start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+#cartePrix
+
+{
+    text-align: right;
+    padding: 60px;
+}
+
+
+/* --------------------------------------------------------------------------------------------------------------
+//                                       Responsive jusqu'à 860 px
+// --------------------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 860px){
+    header
+    {
+        display: flex;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        width: 100%;
+        height: 70px;
+        margin-bottom: 40px;
+        background-color: rgba(104, 0, 202, 0.6);
+        border-bottom: 5px solid orange;
+    }
+    
+    #logo
+    {
+        
+        padding-left:400px ;
+        
+    }
+    
+    #boutique 
+    {
+        padding-top: 100px;
+    }
+    
+    #zoneTextCont
+    {
+        width: 20%;
+        position: fixed;
+        padding-left: 100px;
+       
+    }
+    
+    #zoneText
+    {
+        background-color: rgb(255, 255, 255);
+        border: 1px solid black;
+        border-radius:20px;
+        margin-top: 7px;
+        height: 53px;
+        width: 150px;
+    }
+    
+    #boutonShop
+    {
+        color: white;
+        border: 2px solid white;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 20px;
+        background-color: rgba(80, 60, 255, 0.4);
+        transition-duration: 250ms;
+    }
+
+    #boutonShopCont
+    {
+        padding-left: 10px;
+        width: 60%;    
+    }
+
+    #notifications
+     {
+        background-image: linear-gradient(lightblue, white);
+        display: none;
+        margin-right:10px;
+        width: 30%;
+        height: 30%;
+        padding-right: 5px;
+        cursor: default;
+        position: fixed;
+        top:1;right:0;
+        z-index: 66;
+        box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.8);
+        border: 2px solid rgba(79, 60, 255, 0.356);
+    }
+
+    .notification
+    {
+
+        position: relative;
+        border-bottom: 1px solid none;
+        box-shadow: 0px 0px 0px white;
+    } 
+    
+    #sortie
+    {   
+        cursor: pointer;
+        right:0;
+        position: absolute;
+        background-color:lightblue;
+        border: 1px solid lightblue;
+        z-index: 3;
+    }
+    
+    .PartieGaucheNotification
+    {
+        background-color:none;
+        position: absolute;
+        top:0;left:0;
+        height: 100%;
+        width: 100px;
+    }
+
+    .PartieDroiteNotification
+    {
+        width: 100px;
+        height: 100%;
+        margin-left: 30px;
+        margin-top: 20px;
+        text-align: left;
+    }
+    
+    h2
+    {
+        font-size: 15px;
+        font-weight: bold;
+        color:red;
+        text-align: center;
+        margin: 0px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    #iconeNotif
+    {
+        width: 30px;
+        height: 30px;
+    }
+    
+    body
+    {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    #boutiqueSansTitre
+    {
+        list-style-type: none;
+        
+        display: flex;
+        flex-direction: row;
+        padding-left: 10px;
+        padding-right: 100px;
+    }
+
+    #Cartes
+    {
+        padding-left: 50px;
+        padding-right:2px;
+    }
+    
+    #menuPanier
+    {
+        border-left:2px; 
+        position: relative;
+        margin: 0;
+        width: 90%;
+        height: 300px;
+        overflow:hidden;
+        
+        box-shadow: none;
+    }
+}
+
+/* --------------------------------------------------------------------------------------------------------------
+//                                       Responsive jusqu'à 630 px
+// --------------------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 630px){
+    header
+    {
+        display: flex;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        width: 100%;
+        height: 70px;
+        margin-bottom: 40px;
+        background-color: rgba(104, 0, 202, 0.6);
+        border-bottom: 5px solid red;
+    }
+    
+    #logo
+    
+    {
+        padding-left:200px ;
+        padding-right: 1px;
+        
+        
+    }
+    
+    #boutique 
+    
+    {
+        padding-top: 100px;
+    }
+    
+    #zoneTextCont
+    
+    {
+        width: 40%;
+        padding-left: 25px;
+    }
+    
+    #zoneText
+    
+    {
+        background-color: rgb(255, 255, 255);
+        border: 1px solid black;
+        border-radius:20px;
+        margin-top: 7px;
+        height: 53px;
+        width: 70%;   
+    }
+    
+    #boutonShop
+    
+    {
+        color: white;
+        border: 2px solid white;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 20px;
+        background-color: rgba(80, 60, 255, 0.4);
+        transition-duration: 250ms;
+        width: 50px;
+    }
+    #boutonShopCont
+    
+    {
+        padding-left: 5px;
+        width: 30%;
+    }
+   
+    #notifications
+    
+    {
+        display: none;
+        margin-right:10px;
+        width: 25%;
+        height: 30%;
+        cursor: default;
+        position: fixed;
+        top:1;right:0;
+        z-index: 3;
+        box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.8);
+        border: 2px solid rgba(79, 60, 255, 0.356);
+    }
+   
+    .PartieGaucheNotification
+    
+    {
+        background-color:none;
+        position: absolute;
+        top:0;left:0;
+        height: 100%;
+        width: 100px;
+    }
+    .PartieDroiteNotification
+    
+    {
+        width: 100px;
+        height: 100%;
+        margin-left: 1px;
+        margin-top: 25px;
+        text-align: left;
+    }
+    
+    
+    #iconeNotif
+    
+    {
+        width: 30px;
+        height: 30px;
+    }
+    
+    
+    .ajouterPanier
+
+{   
+    height: 40px;
+    width: 70%;
+    border-radius: 10px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: rgba(100, 100, 255, 0.6);
+    transition-duration: 400ms;
+
+}
+    
+    #boutiqueSansTitre
+    
+    {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    #Cartes
+
+    {
+        width: 50%;
+    
+        
+    }
+    
+    #menuPanier
+    
+    { 
+       
+        border-left:2px; 
+        position: relative;
+
+        margin: 0;
+        width: 110%;
+        height: 300px;
+        overflow:hidden;
+        padding-left: 5px;
+        
+        box-shadow: none;
+        
+    
+    }
+    #payer
+
+{ 
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    height: 60px;
+    width: 40%;
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 0px 2px 30px lightskyblue;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    bottom: 0; 
+    left:0;
+    background-color:rgba(100, 100, 255, 0.6) ;
+    z-index: 3;
+    padding: 1px;
+   
+
+}
+
+#vider
+
+{
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    height: 60px;
+    width: 40%;
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 0px 2px 30px lightskyblue;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    bottom: 0;
+    right:0;
+    background-color:rgba(100, 100, 255, 0.6) ;
+    z-index: 3;
+}
+    
+}
+/* --------------------------------------------------------------------------------------------------------------
+//                                       Responsive jusqu'à 400 px
+// --------------------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 400px){
+    header
+    {
+        display: flex;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        width: 100%;
+        height: 70px;
+        margin-bottom: 40px;
+        background-color: rgba(104, 0, 202, 0.6);
+        border-bottom: 5px solid blue;
+    }
+#logo{
+        padding-left: 70px;
+       
+       }
+       #zoneTextCont
+
+{
+    width: 100%;
+}
+
+#zoneText
+
+{
+    cursor:pointer;
+    background-color: rgba(255, 255, 255, 0.904);
+    border: 1px solid black;
+    border-radius:20px;
+    margin-top: 7px;
+    height: 53px;
+    width: 20%;
+    
+}
+.TextSug
+
+{
+    width: 60%;
+}
+
+#suggestion
+
+{   
+    background-color:rgba(80, 60, 255, 0.4) ;
+    border: 1px solid none rgb(black);
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left; 
+    margin: 4%;
+}
+    #notifications
+    
+    {
+        display: none;
+        margin-right:10px;
+        width: 30%;
+        height: 18%;
+        cursor: default;
+        position: fixed;
+        top:1;right:0;
+        z-index: 3;
+        box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.8);
+        border: 2px solid rgba(79, 60, 255, 0.356);
+    }
+   
+    .PartieGaucheNotification
+    
+    {
+        background-color:none;
+        position: absolute;
+        top:0;left:0;
+        height: 80%;
+        width: 100px;
+       
+    }
+    .PartieDroiteNotification
+    
+    {
+        width: 100px;
+        height: 70%;
+        margin-left: 1px;
+        margin-top: 1px;
+        text-align: left;
+    }
+    
+    
+    #iconeNotif
+    
+    {
+        width: 20px;
+        height: 20px;
+    }
+    .ajouterPanier
+
+{   
+    height: 40px;
+    width: 55%;
+    border-radius: 10px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: rgba(100, 100, 255, 0.6);
+    transition-duration: 400ms;
+    
+
+}
+    #boutiqueSansTitre
+    
+    {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        
+        
+    }
+
+    
+    .Carte{
+        
+        width: 70%;
+    }
+    
+    #menuPanier
+    
+    { 
+       
+        border-left:2px; 
+        position: relative;
+        width: 100%;
+        height: 550px;
+        overflow:hidden;
+        padding-left: 5px;
+        
+        
+        
+    
+    }
+    
+    #payer
+{ 
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    height: 50px;
+    width: 40%;
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 0px 2px 30px lightskyblue;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    bottom: 0; 
+    left:0;
+    background-color:rgba(100, 100, 255, 0.6) ;
+    z-index: 3;
+   
+
+}
+
+#vider
+
+{
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    height: 50px;
+    width: 40%;
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 0px 2px 30px lightskyblue;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    bottom: 0;
+    right:0;
+    background-color:rgba(100, 100, 255, 0.6) ;
+    z-index: 3;
+}
+}
